@@ -1,0 +1,22 @@
+{
+  "name": "BPCommon",
+  "version": "0.1.0",
+  "summary": "A short description of BPCommon.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/TestEngineerFish/BPCommon",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "TestEngineerFish": "916878440@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/TestEngineerFish/BPCommon.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "BPCommon/Classes/**/*"
+}
