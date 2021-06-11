@@ -1,0 +1,6 @@
+use_frameworks!
+target 'BPCommon_Tests' do
+  pod 'BPCommon', :path => '../'
+  
+  
+end
