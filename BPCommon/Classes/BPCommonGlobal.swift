@@ -10,17 +10,17 @@ import Foundation
 // TODO: ==== Block ====
 
 /// 默认闭包
-typealias DefaultBlock      = (()->Void)
-typealias DefaultImageBlock = ((UIImage?)->Void)
-typealias StringBlock       = ((String)->Void)
-typealias IntBlock          = ((Int)->Void)
-typealias BoolBlock         = ((Bool)->Void)
-typealias DoubleBlock       = ((Double?)->Void)
+public typealias DefaultBlock      = (()->Void)
+public typealias DefaultImageBlock = ((UIImage?)->Void)
+public typealias StringBlock       = ((String)->Void)
+public typealias IntBlock          = ((Int)->Void)
+public typealias BoolBlock         = ((Bool)->Void)
+public typealias DoubleBlock       = ((Double?)->Void)
 
 
 // TODO: ==== Function ====
 /// 震动
-func shake() {
+public func shake() {
     let gen = UIImpactFeedbackGenerator(style: .light)
     gen.prepare()
     gen.impactOccurred()
