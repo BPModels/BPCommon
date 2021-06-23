@@ -34,7 +34,7 @@ public struct BPMediaModel: Mappable, Equatable {
     /// 图片
     public var image: UIImage?
     
-    init() {}
+    public init() {}
     
     public init?(map: Map) {}
     
