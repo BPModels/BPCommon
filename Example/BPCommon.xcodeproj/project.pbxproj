@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QX873WHR5L;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -197,10 +198,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BPCommon_Tests/Pods-BPCommon_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BPCommon/BPCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/BPFile/BPFile.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BPCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BPFile.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -324,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70DAE50CD084634A48F16573 /* Pods-BPCommon_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QX873WHR5L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -346,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E928D0033A70B5AF6C00E8B4 /* Pods-BPCommon_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QX873WHR5L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
