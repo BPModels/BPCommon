@@ -6,7 +6,6 @@
 //  Copyright © 2020 沙庭宇. All rights reserved.
 //
 
-import UIKit
 import Kingfisher
 import BPFile
 
@@ -32,7 +31,7 @@ struct BPDownloadManager {
             switch result {
             case .success(let imageResult):
                 let image = imageResult.image
-                if let imageData = UIImagePNGRepresentation(image) {
+                if let imageData = image.pngData() {
                     // 保存图片到本地
                     if let _session = session {
                         BPFileManager.share.saveSessionMediaFile(type: type, name: name, session: _session, data: imageData)

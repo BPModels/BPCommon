@@ -30,6 +30,6 @@ class BPImageTransform: TransformType {
         guard let _value = value else {
             return nil
         }
-        return UIImagePNGRepresentation(_value)?.base64EncodedString()
+        return _value.pngData()?.base64EncodedString()
     }
 }
