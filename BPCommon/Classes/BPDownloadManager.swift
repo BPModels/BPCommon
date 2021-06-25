@@ -9,8 +9,8 @@
 import Kingfisher
 import BPFile
 
-struct BPDownloadManager {
-    static let share = BPDownloadManager()
+public struct BPDownloadManager {
+    public static let share = BPDownloadManager()
 
     ///   下载图片（下载完后会同步缓存到项目）
     /// - Parameters:
@@ -20,7 +20,7 @@ struct BPDownloadManager {
     ///   - session: 聊天室名称、ID（IM）
     ///   - progress: 下载进度
     ///   - completion: 下载后的回调
-    func image(name: String, urlStr: String, type: BPMediaType, session: String?, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func image(name: String, urlStr: String, type: BPMediaType, session: String?, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
         guard let url = URL(string: urlStr) else {
             return
         }
@@ -47,11 +47,11 @@ struct BPDownloadManager {
         }
     }
 
-    func video(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func video(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
 
     }
 
-    func audio(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func audio(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
 
     }
 }
