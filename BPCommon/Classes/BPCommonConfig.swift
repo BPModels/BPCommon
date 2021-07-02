@@ -9,7 +9,7 @@ import Foundation
 
 public protocol BPCommonDelegate: NSObjectProtocol {
     /// 输出日志
-    func printLog(log: String)
+    func printCommonLog(log: String)
     /// 相册不可用
     func albumUseless()
     /// 相机不可用
