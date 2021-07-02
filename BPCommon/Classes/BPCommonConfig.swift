@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol BPCommonConfigDelegate: NSObjectProtocol {
+public protocol BPCommonDelegate: NSObjectProtocol {
     /// 输出日志
     func printLog(log: String)
     /// 相册不可用
@@ -21,6 +21,6 @@ public protocol BPCommonConfigDelegate: NSObjectProtocol {
 public struct BPCommonConfig {
     public static var share = BPCommonConfig()
     
-    public weak var delegate: BPCommonConfigDelegate?
+    public weak var delegate: BPCommonDelegate?
     
 }
