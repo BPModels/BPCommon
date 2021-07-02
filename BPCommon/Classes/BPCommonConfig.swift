@@ -8,7 +8,14 @@
 import Foundation
 
 public protocol BPCommonConfigDelegate: NSObjectProtocol {
+    /// 输出日志
     func printLog(log: String)
+    /// 相册不可用
+    func albumUseless()
+    /// 相机不可用
+    func cameraUseless()
+    /// 无权限
+    func noPermission(type: BPAuthorizationType)
 }
 
 public struct BPCommonConfig {

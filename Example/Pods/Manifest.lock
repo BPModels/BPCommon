@@ -1,5 +1,5 @@
 PODS:
-  - BPCommon (0.1.2):
+  - BPCommon (0.1.5):
     - BPFile
     - Kingfisher (~> 5.7)
     - ObjectMapper
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BPCommon: ff9db8a5b81f4ef0aa2ce579958607c9932b52e5
+  BPCommon: 5fa7f76a6a464edbe98d30217aee37fe1914fe96
   BPFile: e96685ea7920008bceffa6b675d72705b586029b
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
