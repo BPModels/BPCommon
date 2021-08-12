@@ -11,14 +11,21 @@ import Kingfisher
 import Photos
 import BPFile
 
+public enum BPImageCompressFormat: Int {
+    case jpeg
+    case png
+}
+
 public struct BPMediaModel: Mappable, Equatable {
     
     /// 资源ID
     public var id: String = ""
     /// 资源名称
     public var name: String = ""
-    /// 聊天室名称、ID（仅用于IM）
-    public var session: String?
+    /// 聊天室消息ID（仅用于IM）
+    public var messageId: String?
+    /// 聊天室ID（仅用于IM）
+    public var sessionId: String?
     /// 资源类型
     public var type: BPMediaType = .thumbImage
     /// 缩略图本地地址
@@ -33,6 +40,16 @@ public struct BPMediaModel: Mappable, Equatable {
     public var videoTime: TimeInterval = .zero
     /// 图片
     public var image: UIImage?
+    /// 图片尺寸
+    public var size: CGSize = .zero
+    /// 图片大小
+    public var fileLength: Int = .zero
+    /// 图片MD5
+    public var md5: String?
+    /// 压缩比例
+    public var compressQuality: CGFloat?
+    /// 压缩格式
+    public var compressFormat: BPImageCompressFormat?
     
     public init() {}
     
