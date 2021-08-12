@@ -11,6 +11,7 @@ import Kingfisher
 import Photos
 import BPFile
 
+/// 图片压缩格式
 public enum BPImageCompressFormat: Int {
     case jpeg
     case png
@@ -58,7 +59,7 @@ public struct BPMediaModel: Mappable, Equatable {
     mutating public func mapping(map: Map) {
         self.id                  <- map["id"]
         self.name                <- map["name"]
-        self.session             <- map["session"]
+        self.sessionId           <- map["session"]
         self.type                <- (map["type"], EnumTransform<BPMediaType>())
         self.thumbnailLocalPath  <- map["thumbnailLocalPath"]
         self.thumbnailRemotePath <- map["thumbnailRemotePath"]
@@ -95,7 +96,7 @@ public extension BPMediaModel {
                 completion?(nil)
                 return
             }
-            BPDownloadManager.share.image(name: "ThumbImage", urlStr: path, type: .thumbImage, session: session, progress: progress, completion: completion)
+            BPDownloadManager.share.image(urlStr: path, type: .thumbImage, progress: progress, completion: completion)
         }
     }
     
@@ -115,7 +116,7 @@ public extension BPMediaModel {
                 completion?(nil)
                 return
             }
-            BPDownloadManager.share.image(name: "OriginImage", urlStr: path, type: .originImage, session: session, progress: progress, completion: completion)
+            BPDownloadManager.share.image(urlStr: path, type: .originImage, progress: progress, completion: completion)
         }
     }
     
