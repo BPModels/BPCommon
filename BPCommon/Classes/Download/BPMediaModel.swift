@@ -37,10 +37,12 @@ public struct BPMediaModel: Mappable, Equatable {
     public var originLocalPath: String?
     /// 原图网络地址
     public var originRemotePath: String?
-    /// 视频时长
-    public var videoTime: TimeInterval = .zero
+    /// 时长
+    public var time: TimeInterval = .zero
     /// 图片
     public var image: UIImage?
+    /// 视频等资源对象
+    public var data: Data?
     /// 图片尺寸
     public var size: CGSize = .zero
     /// 图片大小
@@ -65,7 +67,7 @@ public struct BPMediaModel: Mappable, Equatable {
         self.thumbnailRemotePath <- map["thumbnailRemotePath"]
         self.originLocalPath     <- map["originLocalPath"]
         self.originRemotePath    <- map["originRemotePath"]
-        self.videoTime           <- map["videoTime"]
+        self.time                <- map["videoTime"]
         self.image               <- (map["image"], BPImageTransform())
     }
     
