@@ -49,7 +49,7 @@ public func getScreenshotImage() -> UIImage? {
 /// 跳转到APP内设置界面
 public func jumpToAppSetting() {
     let appSetting = URL(string: UIApplication.openSettingsURLString)
-
+    
     if appSetting != nil {
         UIApplication.shared.open(appSetting!, options: [:], completionHandler: nil)
     }

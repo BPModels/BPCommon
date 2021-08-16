@@ -11,7 +11,7 @@ import BPFile
 
 public struct BPDownloadManager {
     public static let share = BPDownloadManager()
-
+    
     ///   下载图片（下载完后会同步缓存到项目）
     /// - Parameters:
     ///   - urlStr: 图片网络地址
@@ -36,12 +36,12 @@ public struct BPDownloadManager {
             }
         }
     }
-
+    
     public func video(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
-
+        
     }
-
+    
     public func audio(name: String, urlStr: String, progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
-
+        
     }
 }
