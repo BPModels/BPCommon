@@ -29,7 +29,7 @@ public enum BPAuthorizationType: String {
 }
 
 public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
-
+    
     public static let share = BPAuthorizationManager()
     
     // MARK: - ---获取相册权限
@@ -128,7 +128,7 @@ public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
             if authStatus == .notDetermined {
                 // App没有显示过授权
                 locationManager.requestWhenInUseAuthorization()
-//                completion?(false)
+                //                completion?(false)
             } else if authStatus == .authorizedWhenInUse {
                 // 已经授权
                 completion?(true)
@@ -157,7 +157,7 @@ public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
     
     private var authorizationComplet: BoolBlock?
     // MARK: ==== CLLocationManagerDelegate ====
-
+    
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
