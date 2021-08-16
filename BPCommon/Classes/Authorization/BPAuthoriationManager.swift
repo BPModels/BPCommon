@@ -9,6 +9,7 @@
 import Photos
 import UserNotifications
 import UIKit
+import Contacts
 
 public enum BPAuthorizationType: String {
     /// 相册
@@ -23,6 +24,8 @@ public enum BPAuthorizationType: String {
     case notification = "通知"
     /// 网络
     case network      = "网络"
+    /// 通讯录
+    case contact      = "通讯录"
 }
 
 public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
@@ -163,4 +166,29 @@ public class BPAuthorizationManager: NSObject, CLLocationManagerDelegate {
             self.authorizationComplet?(false)
         }
     }
+    
+    
+    // MARK: -- 通讯录权限
+    public func contact(completion:@escaping (Bool) -> Void ) {
+        let status = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
+        switch status {
+        case .authorized:
+            completion(true)
+        case .denied, .restricted:
+            completion(false)
+            BPCommonConfig.share.delegate?.noPermission(type: .contact)
+        case .notDetermined:
+            CNContactStore().requestAccess(for: .contacts, completionHandler: { (granted, error) in
+                completion(granted)
+                if (!granted) {
+                    BPCommonConfig.share.delegate?.noPermission(type: .contact)
+                }
+            })
+        @unknown default:
+            return
+        }
+    }
+    
+    
+    
 }
