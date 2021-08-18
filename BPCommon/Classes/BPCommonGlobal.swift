@@ -11,7 +11,7 @@ import Foundation
 
 /// 默认闭包
 public typealias DefaultBlock      = (()->Void)
-public typealias DefaultImageBlock = ((UIImage?)->Void)
+public typealias ImageBlock        = ((UIImage?)->Void)
 public typealias StringBlock       = ((String)->Void)
 public typealias IntBlock          = ((Int)->Void)
 public typealias BoolBlock         = ((Bool)->Void)

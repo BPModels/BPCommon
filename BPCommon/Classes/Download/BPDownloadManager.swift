@@ -21,10 +21,9 @@ public class BPDownloadManager: NSObject, URLSessionDelegate, URLSessionDownload
     ///   下载图片（下载完后会同步缓存到项目）
     /// - Parameters:
     ///   - urlStr: 图片网络地址
-    ///   - type: 图片属性
     ///   - progress: 下载进度
     ///   - completion: 下载后的回调
-    public func image( urlStr: String, type: BPMediaType, progress: CGFloatBlock?, completion: DefaultImageBlock?) {
+    public func image( urlStr: String, progress: CGFloatBlock?, completion: ImageBlock?) {
         guard let url = URL(string: urlStr) else {
             return
         }

@@ -42,7 +42,7 @@ public class BPMediaImageModel: BPMediaModel {
     /// - Parameters:
     ///   - progress: 下载远端缩略图的进度
     ///   - completion: 下载、加载图片完成回调
-    public func getThumbImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func getThumbImage(progress: ((CGFloat) ->Void)?, completion: ImageBlock?) {
         if let image = self.image {
             completion?(image)
             return
@@ -54,7 +54,7 @@ public class BPMediaImageModel: BPMediaModel {
                 completion?(nil)
                 return
             }
-            BPDownloadManager.share.image(urlStr: path, type: .thumbImage, progress: progress, completion: completion)
+            BPDownloadManager.share.image(urlStr: path, progress: progress, completion: completion)
         }
     }
     
@@ -62,7 +62,7 @@ public class BPMediaImageModel: BPMediaModel {
     /// - Parameters:
     ///   - progress: 下载远端缩略图的进度
     ///   - completion: 下载、加载图片完成回调
-    public func getOriginImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func getOriginImage(progress: ((CGFloat) ->Void)?, completion: ImageBlock?) {
         if let image = self.image {
             completion?(image)
             return
@@ -74,12 +74,12 @@ public class BPMediaImageModel: BPMediaModel {
                 completion?(nil)
                 return
             }
-            BPDownloadManager.share.image(urlStr: path, type: .originImage, progress: progress, completion: completion)
+            BPDownloadManager.share.image(urlStr: path, progress: progress, completion: completion)
         }
     }
     
     // 默认获取原图，如果没有则获取缩略图
-    public func getImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
+    public func getImage(progress: ((CGFloat) ->Void)?, completion: ImageBlock?) {
         self.getOriginImage(progress: progress) { (image) in
             if let _image = image {
                 completion?(_image)

@@ -26,6 +26,10 @@ public class BPMediaVideoModel: BPMediaModel {
     public var time: TimeInterval = .zero
     
     // MARK: ==== Tools ====
+    /// 获取视频
+    /// - Parameters:
+    ///   - progress: 下载进度（如本地不存在，则下载）
+    ///   - completion: 完成回调
     public func getVideo(progress: CGFloatBlock?, completion: DataBlock?) {
         if let _data = self.data {
             completion?(_data)
@@ -39,6 +43,18 @@ public class BPMediaVideoModel: BPMediaModel {
                     completion?(data)
                 }
             }
+        }
+    }
+    
+    /// 获取封面图
+    /// - Parameters:
+    ///   - progress: 下载进度（如本地不存在，则下载）
+    ///   - completion: 完成回调
+    public func getCover(progress: CGFloatBlock?, completion: ImageBlock?) {
+        if let _localPath = self.coverPath, let image = UIImage(contentsOfFile: _localPath) {
+           completion?(image)
+        } else if let urlStr = self.coverUrl {
+            BPDownloadManager.share.image(urlStr: urlStr, progress: progress, completion: completion)
         }
     }
 }
