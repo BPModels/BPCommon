@@ -1,5 +1,5 @@
 //
-//  BPMedioVideoModel.swift
+//  BPMediaVideoModel.swift
 //  BPCommon
 //
 //  Created by samsha on 2021/8/18.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// 视频资源
-public class BPMedioVideoModel: BPMediaModel {
+public class BPMediaVideoModel: BPMediaModel {
 
     /// 视频本地地址
     public var videoLocalPath: String?

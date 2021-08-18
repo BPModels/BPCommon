@@ -18,8 +18,8 @@
 		17C60B721B97E62643D8E6F5BEDCED26 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1D1FA7158E70111208FA62D47EC03 /* Placeholder.swift */; };
 		1F3118EB404C341B8737F47D8C8C16A4 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03CC4B7B900D48B3B01A755F9FC7AC1 /* FromJSON.swift */; };
 		1F32A594261B310A9E21583EBD129662 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62BE8E42EBFCD1C925A3836103C8A4 /* EnumOperators.swift */; };
-		22165E5126CD057100D67D9A /* BPMedioImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22165E5026CD057100D67D9A /* BPMedioImageModel.swift */; };
-		22165E5326CD058300D67D9A /* BPMedioVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22165E5226CD058300D67D9A /* BPMedioVideoModel.swift */; };
+		22165E5126CD057100D67D9A /* BPMediaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22165E5026CD057100D67D9A /* BPMediaImageModel.swift */; };
+		22165E5326CD058300D67D9A /* BPMediaVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22165E5226CD058300D67D9A /* BPMediaVideoModel.swift */; };
 		223B70DC4C51A9B7E505E2073E91AECE /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9232989CD427EA315931004EA81621D /* AnimatedImageView.swift */; };
 		24B03BEEFF5BC256E68190D3F703EEAA /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADF88648D601EAAA9D1F29EAB99745F /* ImmutableMappable.swift */; };
 		2A03862AC713DEF34B5758B7552C43DF /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BBE72D0E750AA9ABF642A124ACA192 /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,8 +188,8 @@
 		1F63744A6086474E18A364A87008ECF4 /* BPCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BPCommon.release.xcconfig; sourceTree = "<group>"; };
 		21415939FE549C54FBA5E436C7032DE0 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		21CDA142BBF4E432D66AD3C28C05245E /* BPFile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BPFile-umbrella.h"; sourceTree = "<group>"; };
-		22165E5026CD057100D67D9A /* BPMedioImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMedioImageModel.swift; sourceTree = "<group>"; };
-		22165E5226CD058300D67D9A /* BPMedioVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMedioVideoModel.swift; sourceTree = "<group>"; };
+		22165E5026CD057100D67D9A /* BPMediaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaImageModel.swift; sourceTree = "<group>"; };
+		22165E5226CD058300D67D9A /* BPMediaVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMediaVideoModel.swift; sourceTree = "<group>"; };
 		24461B9210164ACC2AE2462B28F6770F /* BPFile-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BPFile-prefix.pch"; sourceTree = "<group>"; };
 		2E41B1EDE380267F9B86FFFFA2660E31 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6EFDEB0BEF4F537C196E154F807051 /* BPFile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BPFile-Info.plist"; sourceTree = "<group>"; };
@@ -434,8 +434,8 @@
 				312E19DB4F6E55101F30CE8595CBCAC9 /* BPDownloadManager.swift */,
 				B3A4290BF4920A01965C7D1B7132A74A /* BPImageTransform.swift */,
 				9A60911114AD0A6B11E892B77FCE8439 /* BPMediaModel.swift */,
-				22165E5026CD057100D67D9A /* BPMedioImageModel.swift */,
-				22165E5226CD058300D67D9A /* BPMedioVideoModel.swift */,
+				22165E5026CD057100D67D9A /* BPMediaImageModel.swift */,
+				22165E5226CD058300D67D9A /* BPMediaVideoModel.swift */,
 			);
 			name = Download;
 			path = BPCommon/Classes/Download;
@@ -1002,12 +1002,12 @@
 			files = (
 				1087B66AEF36198250F20AD6EC7B95FB /* BPAuthoriationManager.swift in Sources */,
 				B73710CE61DDD83512D209EB6B456AF4 /* BPCommon-dummy.m in Sources */,
-				22165E5326CD058300D67D9A /* BPMedioVideoModel.swift in Sources */,
+				22165E5326CD058300D67D9A /* BPMediaVideoModel.swift in Sources */,
 				CD0D94BC90A231E20334BD483B6E4AD1 /* BPCommonConfig.swift in Sources */,
 				3AED3DFABC1B537CED0384A4D64DEE96 /* BPCommonGlobal.swift in Sources */,
 				3A52CA06AF56CD240F4E60D43BF32B7B /* BPDownloadManager.swift in Sources */,
 				DE7385C80327E31EED0FFFE78D0FD8AF /* BPImageTransform.swift in Sources */,
-				22165E5126CD057100D67D9A /* BPMedioImageModel.swift in Sources */,
+				22165E5126CD057100D67D9A /* BPMediaImageModel.swift in Sources */,
 				2FBB14653F6E59711E4D74A78BE06544 /* BPMediaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

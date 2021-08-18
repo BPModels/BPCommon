@@ -1,5 +1,5 @@
 //
-//  BPMedioImageModel.swift
+//  BPMediaImageModel.swift
 //  BPCommon
 //
 //  Created by samsha on 2021/8/18.
@@ -17,7 +17,7 @@ public enum BPImageCompressFormat: Int {
 }
 
 /// 图片资源
-public class BPMedioImageModel: BPMediaModel {
+public class BPMediaImageModel: BPMediaModel {
 
     /// 图片
     public var image: UIImage?
