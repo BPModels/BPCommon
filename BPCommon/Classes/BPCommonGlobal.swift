@@ -17,6 +17,9 @@ public typealias IntBlock          = ((Int)->Void)
 public typealias BoolBlock         = ((Bool)->Void)
 public typealias DoubleBlock       = ((Double?)->Void)
 public typealias MediaListBlock    = (([BPMediaModel])->Void)
+public typealias MediaBlock        = ((BPMediaModel?)->Void)
+public typealias DataBlock         = ((Data?)->Void)
+public typealias CGFloatBlock      = ((CGFloat)->Void)
 
 
 // MARK: ----时间----

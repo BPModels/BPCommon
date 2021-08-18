@@ -11,13 +11,8 @@ import Kingfisher
 import Photos
 import BPFile
 
-/// 图片压缩格式
-public enum BPImageCompressFormat: Int {
-    case jpeg
-    case png
-}
 
-public struct BPMediaModel: Mappable, Equatable {
+public class BPMediaModel: Mappable, Equatable {
     
     /// 资源ID
     public var id: String = ""
@@ -29,46 +24,16 @@ public struct BPMediaModel: Mappable, Equatable {
     public var sessionId: String?
     /// 资源类型
     public var type: BPMediaType = .thumbImage
-    /// 缩略图本地地址
-    public var thumbnailLocalPath: String?
-    /// 缩略图网络地址
-    public var thumbnailRemotePath: String?
-    /// 原图本地地址
-    public var originLocalPath: String?
-    /// 原图网络地址
-    public var originRemotePath: String?
-    /// 时长
-    public var time: TimeInterval = .zero
-    /// 图片
-    public var image: UIImage?
-    /// 视频等资源对象
-    public var data: Data?
-    /// 图片尺寸
-    public var size: CGSize = .zero
-    /// 图片大小
-    public var fileLength: Int = .zero
     /// 图片MD5
     public var md5: String?
-    /// 压缩比例
-    public var compressQuality: CGFloat?
-    /// 压缩格式
-    public var compressFormat: BPImageCompressFormat?
+    /// 文件大小
+    public var fileLength: Int = .zero
     
     public init() {}
     
-    public init?(map: Map) {}
+    required public init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
-        self.id                  <- map["id"]
-        self.name                <- map["name"]
-        self.sessionId           <- map["session"]
-        self.type                <- (map["type"], EnumTransform<BPMediaType>())
-        self.thumbnailLocalPath  <- map["thumbnailLocalPath"]
-        self.thumbnailRemotePath <- map["thumbnailRemotePath"]
-        self.originLocalPath     <- map["originLocalPath"]
-        self.originRemotePath    <- map["originRemotePath"]
-        self.time                <- map["videoTime"]
-        self.image               <- (map["image"], BPImageTransform())
+    public func mapping(map: Map) {
     }
     
     // MARK: ==== Tools ====
@@ -81,56 +46,3 @@ public struct BPMediaModel: Mappable, Equatable {
     }
 }
 
-public extension BPMediaModel {
-    /// 显示缩略图，如果本地不存在则通过远端下载
-    /// - Parameters:
-    ///   - progress: 下载远端缩略图的进度
-    ///   - completion: 下载、加载图片完成回调
-    func getThumbImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
-        if let image = self.image {
-            completion?(image)
-            return
-        }
-        if let path = self.thumbnailLocalPath, let image = UIImage(named: path) {
-            completion?(image)
-        } else {
-            guard let path = self.thumbnailRemotePath else {
-                completion?(nil)
-                return
-            }
-            BPDownloadManager.share.image(urlStr: path, type: .thumbImage, progress: progress, completion: completion)
-        }
-    }
-    
-    /// 显示原图，如果本地不存在则通过远端下载
-    /// - Parameters:
-    ///   - progress: 下载远端缩略图的进度
-    ///   - completion: 下载、加载图片完成回调
-    func getOriginImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
-        if let image = self.image {
-            completion?(image)
-            return
-        }
-        if let path = self.originLocalPath, let image = UIImage(named: path) {
-            completion?(image)
-        } else {
-            guard let path = self.originRemotePath else {
-                completion?(nil)
-                return
-            }
-            BPDownloadManager.share.image(urlStr: path, type: .originImage, progress: progress, completion: completion)
-        }
-    }
-    
-    // 默认获取原图，如果没有则获取缩略图
-    func getImage(progress: ((CGFloat) ->Void)?, completion: DefaultImageBlock?) {
-        self.getOriginImage(progress: progress) { (image) in
-            if let _image = image {
-                completion?(_image)
-            } else {
-                // 获取缩略图
-                self.getThumbImage(progress: progress, completion: completion)
-            }
-        }
-    }
-}
