@@ -57,4 +57,15 @@ public class BPMediaVideoModel: BPMediaModel {
             BPDownloadManager.share.image(urlStr: urlStr, progress: progress, completion: completion)
         }
     }
+    
+    /// 获取视频地址
+    public func getVideoUrl() -> URL? {
+        if let _path = self.videoLocalPath, FileManager.default.fileExists(atPath: _path) {
+            return URL(fileURLWithPath: _path)
+        } else if let _path = self.videoRemotePath {
+            return URL(string: _path)
+        } else {
+            return nil
+        }
+    }
 }
