@@ -23,7 +23,7 @@ public class BPMediaModel: Mappable, Equatable {
     /// 聊天室ID（仅用于IM）
     public var sessionId: String?
     /// 资源类型
-    public var type: BPMediaType = .thumbImage
+    public var type: BPMediaType = .image(type: .image)
     /// 图片MD5
     public var md5: String?
     /// 文件大小

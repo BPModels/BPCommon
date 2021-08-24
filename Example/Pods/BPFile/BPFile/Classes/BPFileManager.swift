@@ -48,12 +48,51 @@ public struct BPFileManager {
         BPFileConfig.share.delegate?.printFileLog(log: "文件\(name)读取成功")
         return data
     }
+    
+    /// 保存云盘文件
+    @discardableResult
+    public func saveCloudFile(folderName:String, fileName: String, data: Data) -> Bool {
+        let folderPath = self.cloudPath(folderName: folderName, fileName: nil)
+        self.checkDirectory(path: folderPath)
+        let path = self.cloudPath(folderName: folderName, fileName: fileName)
+        let result = FileManager.default.createFile(atPath: path, contents: data, attributes: nil)
+        return result
+    }
+    /// 删除云盘文件夹或者文件
+    public func removeCloudItem(folderName:String, fileName: String?) {
+        let path:String = self.cloudPath(folderName: folderName, fileName: fileName)
+        try? FileManager.default.removeItem(atPath: path)
+    }
+    
+    /// 检测云盘文件是否存在
+    public func checkCloudFileExists(folderName:String, fileName: String) -> Bool {
+        let path = self.cloudPath(folderName: folderName, fileName: fileName)
+//        let all = FileManager.default.enumerator(atPath: self.cloudPath(type: type))?.allObjects
+        return FileManager.default.fileExists(atPath: path)
+    }
+
+
+    /// 录制的音频文件路径
+    public var voicePath: String {
+        let path = documentPath() + "/Voice"
+        self.checkDirectory(path: path)
+        return path
+    }
 
     /// 默认资源存放路径
     /// - Returns: 路径地址
     private func normalPath() -> String {
         let path = documentPath() + "/Normal"
         self.checkDirectory(path: path)
+        return path
+    }
+    
+    /// 云盘文件(夹)路径
+    public func cloudPath(folderName:String, fileName:String? = nil) -> String {
+        var path = documentPath() + "/cloud/\(folderName)"
+        if let fileName = fileName{
+            path.append("/\(fileName)")
+        }
         return path
     }
     
