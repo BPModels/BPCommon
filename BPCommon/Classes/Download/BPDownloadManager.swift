@@ -25,6 +25,7 @@ public class BPDownloadManager: NSObject, URLSessionDelegate, URLSessionDownload
     ///   - completion: 下载后的回调
     public func image( urlStr: String, progress: CGFloatBlock?, completion: ImageBlock?) {
         guard let url = URL(string: urlStr) else {
+            completion?(nil)
             return
         }
         UIImageView().kf.setImage(with: url, placeholder: nil, options: []) { (receivedSize, totalSize) in
@@ -45,9 +46,15 @@ public class BPDownloadManager: NSObject, URLSessionDelegate, URLSessionDownload
     public func video(name: String, urlStr: String, progress: CGFloatBlock?, completion: DataBlock?) {
         let config  = URLSessionConfiguration.background(withIdentifier: "tenant.cn")
         let session = URLSession(configuration: config, delegate: self, delegateQueue: queue)
-        guard let url = URL(string: urlStr) else { return }
+        guard let url = URL(string: urlStr) else {
+            completion?(nil)
+            return
+        }
         let task = session.downloadTask(with: URLRequest(url: url)) { url, response, error in
-            guard let localUrl = url, let _data = try? Data(contentsOf: localUrl)  else { return }
+            guard let localUrl = url, let _data = try? Data(contentsOf: localUrl)  else {
+                completion?(nil)
+                return
+            }
             completion?(_data)
             print("下载完成")
         }
@@ -59,9 +66,15 @@ public class BPDownloadManager: NSObject, URLSessionDelegate, URLSessionDownload
     public func audio(name: String, urlStr: String, progress: CGFloatBlock?, completion: DataBlock?) {
         let config  = URLSessionConfiguration.background(withIdentifier: "tenant.cn")
         let session = URLSession(configuration: config, delegate: self, delegateQueue: queue)
-        guard let url = URL(string: urlStr) else { return }
+        guard let url = URL(string: urlStr) else {
+            completion?(nil)
+            return
+        }
         let task = session.downloadTask(with: URLRequest(url: url)) { url, response, error in
-            guard let localUrl = url, let _data = try? Data(contentsOf: localUrl)  else { return }
+            guard let localUrl = url, let _data = try? Data(contentsOf: localUrl)  else {
+                completion?(nil)
+                return
+            }
             completion?(_data)
             print("下载完成")
         }
