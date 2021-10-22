@@ -66,7 +66,7 @@ public enum BPMediaImageType {
     /// 原图（未压缩）
     case originImage
     
-    var typeStr: String {
+    public var typeStr: String {
         get {
             switch self {
             case .icon:
