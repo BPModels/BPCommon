@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BPCommon'
-  s.version          = '0.3.6'
+  s.version          = '0.3.7'
   s.summary          = 'A short description of BPCommon.'
 
 # This description is used to generate tags and improve search results.
@@ -43,6 +43,4 @@ TODO: Add long description of the pod here.
   s.dependency 'ObjectMapper'
   # 下载处理图片
   s.dependency 'Kingfisher', '~> 5.7'
-  # 文件管理
-  s.dependency 'BPFile'
 end

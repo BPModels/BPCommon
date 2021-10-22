@@ -8,7 +8,6 @@
 import ObjectMapper
 import Kingfisher
 import Photos
-import BPFile
 
 /// 图片压缩格式
 public enum BPImageCompressFormat: Int {

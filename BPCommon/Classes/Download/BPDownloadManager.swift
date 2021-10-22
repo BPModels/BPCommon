@@ -7,7 +7,6 @@
 //
 
 import Kingfisher
-import BPFile
 
 public class BPDownloadManager: NSObject, URLSessionDelegate, URLSessionDownloadDelegate {
     

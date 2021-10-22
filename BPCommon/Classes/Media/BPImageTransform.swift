@@ -7,15 +7,15 @@
 
 import ObjectMapper
 
-class BPImageTransform: TransformType {
+public class BPImageTransform: TransformType {
 
-    typealias Object = UIImage
+    public typealias Object = UIImage
     
-    typealias JSON = Any?
+    public typealias JSON = Any?
     
     init() {}
         
-    func transformFromJSON(_ value: Any?) -> UIImage? {
+    public func transformFromJSON(_ value: Any?) -> UIImage? {
         var result: UIImage?
         guard let json = value as? String else {
             return result
@@ -26,7 +26,7 @@ class BPImageTransform: TransformType {
         return result
     }
     
-    func transformToJSON(_ value: UIImage?) -> Any?? {
+    public func transformToJSON(_ value: UIImage?) -> Any?? {
         guard let _value = value else {
             return nil
         }

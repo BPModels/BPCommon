@@ -1,9 +1,7 @@
 PODS:
-  - BPCommon (0.3.2):
-    - BPFile
+  - BPCommon (0.3.6):
     - Kingfisher (~> 5.7)
     - ObjectMapper
-  - BPFile (0.3.0)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -13,8 +11,6 @@ DEPENDENCIES:
   - BPCommon (from `../`)
 
 SPEC REPOS:
-  https://github.com/BPModels/BPSpecs.git:
-    - BPFile
   trunk:
     - Kingfisher
     - ObjectMapper
@@ -24,11 +20,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BPCommon: 05a3b2c66d0bec97b4bcdcb09eb95551430a712c
-  BPFile: 590f1bd068034d220e360f2a8831481d8512ff59
+  BPCommon: a7eb60d589545a07ed6f8f9101a4718871ed0a1f
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
 
 PODFILE CHECKSUM: 16f00af707075dc45713575835f43f5d9811942a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
