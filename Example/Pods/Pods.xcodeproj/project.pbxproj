@@ -23,6 +23,7 @@
 		2209DAFB27226BD80032699B /* BPMediaVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209DAF727226BD80032699B /* BPMediaVideoModel.swift */; };
 		2209DAFC27226BD80032699B /* BPMediaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209DAF827226BD80032699B /* BPMediaImageModel.swift */; };
 		2209DAFD27226BD80032699B /* BPMediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209DAF927226BD80032699B /* BPMediaModel.swift */; };
+		2209DB00272292A90032699B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209DAFF272292A90032699B /* UIFont+Extension.swift */; };
 		23DE1601FCC453AF893B06EFD78C8B8C /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0620D361C438912EAE52ED30C9205B1F /* UIButton+Kingfisher.swift */; };
 		252B318A34A72D8ED7DBBC6E9C07A0CF /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A524FC7083E27D4CE749C0C155327 /* ImageView+Kingfisher.swift */; };
 		2A31C5819B038BA94AB20DC690877646 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9060464159E13D7209F7D64BACF83DAD /* Foundation.framework */; };
@@ -164,6 +165,7 @@
 		2209DAF727226BD80032699B /* BPMediaVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BPMediaVideoModel.swift; path = ../BPCommon/Classes/Media/BPMediaVideoModel.swift; sourceTree = "<group>"; };
 		2209DAF827226BD80032699B /* BPMediaImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BPMediaImageModel.swift; path = ../BPCommon/Classes/Media/BPMediaImageModel.swift; sourceTree = "<group>"; };
 		2209DAF927226BD80032699B /* BPMediaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BPMediaModel.swift; path = ../BPCommon/Classes/Media/BPMediaModel.swift; sourceTree = "<group>"; };
+		2209DAFF272292A90032699B /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "../BPCommon/Classes/Extension/UIFont+Extension.swift"; sourceTree = "<group>"; };
 		22FCC17AA2D59BED0930F6887D31B008 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
 		29CCE0828D1C93F61CD4C33317D26C0B /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
 		29E82768C370DEE1BA572B17B6D3C519 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
@@ -340,6 +342,14 @@
 				2209DAF727226BD80032699B /* BPMediaVideoModel.swift */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		2209DAFE2722924A0032699B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2209DAFF272292A90032699B /* UIFont+Extension.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		368FD1B5620AAC1E500F1178EF063122 /* Pod */ = {
@@ -593,6 +603,7 @@
 		FEBFF68CC7DF6561FFDBE3484AE9EFC3 /* BPCommon */ = {
 			isa = PBXGroup;
 			children = (
+				2209DAFE2722924A0032699B /* Font */,
 				2209DAF527226B780032699B /* Media */,
 				D0CCE12725BA0CD0491ADC48821A8D5A /* BPCommonConfig.swift */,
 				78213A2DE2EF28F1F02789778674E38D /* BPCommonGlobal.swift */,
@@ -798,6 +809,7 @@
 				2209DAFA27226BD80032699B /* BPImageTransform.swift in Sources */,
 				B2BE52E3D9F73066A56D776FF0190671 /* BPDownloadManager.swift in Sources */,
 				2209DAFC27226BD80032699B /* BPMediaImageModel.swift in Sources */,
+				2209DB00272292A90032699B /* UIFont+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
