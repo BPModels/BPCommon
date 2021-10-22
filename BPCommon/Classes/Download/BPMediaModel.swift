@@ -37,10 +37,6 @@ public class BPMediaModel: Mappable, Equatable {
     }
     
     // MARK: ==== Tools ====
-    private func queryImageCache(path: String, block: ImageBlock) {
-        
-    }
-    
     public static func == (lhs: BPMediaModel, rhs: BPMediaModel) -> Bool {
         return lhs.id == rhs.id
     }

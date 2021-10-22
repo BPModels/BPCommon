@@ -21,6 +21,7 @@
 		1F160B2A6AD9CA6E80B956AA9A2C93B2 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7D8FCF270C031E489C0D9019AB310 /* ImagePrefetcher.swift */; };
 		21E8F6B5A8B5351937DB8FB3CB340E4C /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03CC4B7B900D48B3B01A755F9FC7AC1 /* FromJSON.swift */; };
 		220050178E1DE4A4EE96D58457170266 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF7BD30214A75EB2BE203FCE84A75BD /* Accelerate.framework */; };
+		2209DAF127224FB90032699B /* BPDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209DAF027224FB90032699B /* BPDeviceInfo.swift */; };
 		237281DB67F91A8F3AD9DF563452E424 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00166CF42385AF9B734B7B39D34070 /* URLTransform.swift */; };
 		23BC595DEB754942F7D1B34DB0981434 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF182F7E26FE62EAFEFD6C0C937307 /* Source.swift */; };
 		23E554BF978A530E472ACA72B27D079F /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE08C2502721CC5F2DCA23D2A309CF /* Mappable.swift */; };
@@ -180,13 +181,14 @@
 		108AB420CB7AF6D41176BD3E6F5FDE7F /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
 		15702EDC2EE8373089638A640837CD18 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
 		16672A7CBDA94D2D7938B045CFB1CD80 /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
-		18413627FC43BE35D0A363E0C09F948C /* BPFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BPFile.framework; path = BPFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18413627FC43BE35D0A363E0C09F948C /* BPFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BPFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1985FA806A1425AB2EAF7EE82D13476C /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
 		1D7809811048AEFA362FA4ED6DE4CF5E /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		1D7CC72B43E853C65CAD0E32246FF578 /* ObjectMapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ObjectMapper-Info.plist"; sourceTree = "<group>"; };
 		1D8D0C7EAEFD80F9D529381DFAF5342F /* BPMediaVideoModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BPMediaVideoModel.swift; sourceTree = "<group>"; };
 		21415939FE549C54FBA5E436C7032DE0 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		21CDA142BBF4E432D66AD3C28C05245E /* BPFile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BPFile-umbrella.h"; sourceTree = "<group>"; };
+		2209DAF027224FB90032699B /* BPDeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BPDeviceInfo.swift; path = ../BPCommon/Classes/DeviceInfo/BPDeviceInfo.swift; sourceTree = "<group>"; };
 		24461B9210164ACC2AE2462B28F6770F /* BPFile-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BPFile-prefix.pch"; sourceTree = "<group>"; };
 		2618DCD1984D7CA10845E3C3B0EC4765 /* BPMediaModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BPMediaModel.swift; sourceTree = "<group>"; };
 		2E41B1EDE380267F9B86FFFFA2660E31 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,7 +227,7 @@
 		6397530648B250D1568C1425251B18F9 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
 		69B9A1E56D63B5952B971F3B33FC24FA /* Pods-BPCommon_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BPCommon_Tests-dummy.m"; sourceTree = "<group>"; };
 		6B66F03D66690E33AD042B150546B0E1 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
-		6D0A635EC833DC421E6686497A8A0474 /* BPCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BPCommon.framework; path = BPCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0A635EC833DC421E6686497A8A0474 /* BPCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BPCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7087AF78266A767FE477DC8C38784471 /* UserDefault+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UserDefault+Extension.swift"; path = "BPFile/Classes/UserDefault+Extension.swift"; sourceTree = "<group>"; };
 		7362696BF53CDFE4EC625EB3D092325D /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		73BE08C2502721CC5F2DCA23D2A309CF /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
@@ -233,7 +235,7 @@
 		7A0E5DC881ADE8216E7015670B2ACBD7 /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
 		7A4BADD3C6943DFA4D5EEE3DBA004032 /* BPFileManager+IM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BPFileManager+IM.swift"; path = "BPFile/Classes/BPFileManager+IM.swift"; sourceTree = "<group>"; };
 		7DDF182F7E26FE62EAFEFD6C0C937307 /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
-		7EBA7596B348475C749F67A9A74534AC /* Pods_BPCommon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BPCommon_Tests.framework; path = "Pods-BPCommon_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBA7596B348475C749F67A9A74534AC /* Pods_BPCommon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPCommon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C0E40D067A1201275ABEE486F21010 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		81B4A6DFAA473FF06E2BE9B3A20A1157 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
 		82E7F374920F792386AD6B81CCB5AFC3 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
@@ -249,11 +251,11 @@
 		97DA31738541545AF447F3078B366401 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
 		9A6694C4C966DD0C56062EA76B94844D /* Pods-BPCommon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BPCommon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D398AE65F4C3FEFFD55FFC22D45FEC3 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E31589118D3493461D66ED5FC845C49 /* ObjectMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.release.xcconfig; sourceTree = "<group>"; };
 		9E9C5432D6EA2C13693E8D9FF1C6D4EA /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
 		9FB172FEF55C6B75E2A494A7DD67BEDC /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
-		A0D7080A22D83ADF642CCB521777DD9E /* BPCommon.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BPCommon.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0D7080A22D83ADF642CCB521777DD9E /* BPCommon.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BPCommon.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2AAED80461649A206B5AC2FB6E7D4AC /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
 		A3BBE72D0E750AA9ABF642A124ACA192 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
 		A4764B2DD99424242D2BDAC6DA9E8AD2 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
@@ -268,18 +270,18 @@
 		B3FA8D3606B7EC28F0B68D96923FFFA3 /* BPCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BPCache.swift; path = BPFile/Classes/BPCache.swift; sourceTree = "<group>"; };
 		B70C8CA42E5DAB2AC311F30FF5BDCB0C /* BPCommon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BPCommon-prefix.pch"; sourceTree = "<group>"; };
 		B822F7A3F176EBBC815868B647FA8CF7 /* BPCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BPCommon.debug.xcconfig; sourceTree = "<group>"; };
-		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F143488D7AD56352AD0A0F9F712421 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
 		BADF88648D601EAAA9D1F29EAB99745F /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
 		BE577E4B7187EC3BA8EFB83CF4BA0C57 /* BPFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BPFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D7D8FCF270C031E489C0D9019AB310 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		C38CE316EF3167940C912A9A7AE36A63 /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Sources/HexColorTransform.swift; sourceTree = "<group>"; };
-		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C752A3FAD1ACEB3352493F5C59DFB3F2 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7ABA05AD66F36BD86495AC46B518580 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
 		C890D71FDE579B8C433BDC7AF320CA0B /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
 		C99B75706F51A3EC338A898AE88AD98F /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		CA6DE3FB14E013147DAAC725B0942A07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CA6DE3FB14E013147DAAC725B0942A07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBD29DB26015127D3BE38A19AD0C85DE /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
 		CC476D212570C7D6F0746C1918E7C5BA /* BPFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BPFile.release.xcconfig; sourceTree = "<group>"; };
 		CC60DC3D54B7630480B4F843DFAAF0BC /* BPFile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BPFile.modulemap; sourceTree = "<group>"; };
@@ -293,7 +295,7 @@
 		D60A0627270A020BA8D361BA2C891E9C /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		D8E873ECE96A4C0B5A287AF4021546E6 /* BPFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BPFile.debug.xcconfig; sourceTree = "<group>"; };
 		DA578166FB0C2D3D50053710ABD6048C /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		DC6CB974FF0D4937C00CBCD3EACD8D5F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DC6CB974FF0D4937C00CBCD3EACD8D5F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE65695A0527849B39221FEBD4B1A574 /* Pods-BPCommon_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BPCommon_Tests-umbrella.h"; sourceTree = "<group>"; };
 		DFBDC99D224D8216A9A7B5E7CE0D8ACA /* NSTextAttachment+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextAttachment+Kingfisher.swift"; path = "Sources/Extensions/NSTextAttachment+Kingfisher.swift"; sourceTree = "<group>"; };
 		E397BE30030DBBEC3A4AE37B719654C8 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
@@ -370,6 +372,14 @@
 				80E32C8C78445BF52E74FC099B007EFF /* BPCommon */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2209DAEF27224F6E0032699B /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2209DAF027224FB90032699B /* BPDeviceInfo.swift */,
+			);
+			path = DeviceInfo;
 			sourceTree = "<group>";
 		};
 		4E35F3F362CB24FE36F7D581D3B660F1 /* Support Files */ = {
@@ -449,13 +459,13 @@
 				7087AF78266A767FE477DC8C38784471 /* UserDefault+Extension.swift */,
 				9D7FE924BB857BB5F2C784B336E89C4D /* Support Files */,
 			);
-			name = BPFile;
 			path = BPFile;
 			sourceTree = "<group>";
 		};
 		80E32C8C78445BF52E74FC099B007EFF /* BPCommon */ = {
 			isa = PBXGroup;
 			children = (
+				2209DAEF27224F6E0032699B /* DeviceInfo */,
 				FA4D079F5EC2E43ADECF93EDD5728087 /* BPCommonConfig.swift */,
 				52827E67DA956440F8CE469B4A84E6AD /* BPCommonGlobal.swift */,
 				D0D8BD7FCF5D92DA262E3025CD57B36A /* Authorization */,
@@ -515,7 +525,6 @@
 				4D00166CF42385AF9B734B7B39D34070 /* URLTransform.swift */,
 				6E17FEB35B58217FD78904D6A65C88AD /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -670,7 +679,6 @@
 				F917E354CF3E4B59510080A1FEC3EE05 /* Core */,
 				4E35F3F362CB24FE36F7D581D3B660F1 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -893,6 +901,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1E765F26C4EF1AEEB0598DC3BCAD03 /* BPAuthoriationManager.swift in Sources */,
+				2209DAF127224FB90032699B /* BPDeviceInfo.swift in Sources */,
 				A9F52A160B9F7E33E283DCD7689F5F9A /* BPCommon-dummy.m in Sources */,
 				433842E8D4D46F5CC0F43A287AD55D48 /* BPCommonConfig.swift in Sources */,
 				5BAADA604F65E108CD5BEE29761D2CD7 /* BPCommonGlobal.swift in Sources */,
@@ -1317,8 +1326,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
