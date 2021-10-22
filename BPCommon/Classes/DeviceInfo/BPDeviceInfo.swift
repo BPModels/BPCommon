@@ -11,7 +11,7 @@ import CoreTelephony
 public struct BPDeviceInfo {
     static let share = BPDeviceInfo()
     /// 设备型号
-    func model() -> DeviceModelType {
+    func model() -> BPDeviceModelType {
         var size: Int = 0
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         var machine: [CChar] = [CChar](repeating: 0, count: size)
