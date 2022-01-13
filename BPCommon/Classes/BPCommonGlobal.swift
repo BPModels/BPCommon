@@ -53,6 +53,10 @@ public var isDark: Bool {
 public var isSimulator: Bool {
     get {
         var isSim = false
+//        模拟器
+//        TARGET_IPHONE_SIMULATOR
+//        真机
+//        TARGET_OS_IPHONE
 #if arch(i386) || arch(x86_64)
         isSim = true
 #endif
